@@ -31,28 +31,8 @@
    background-color: cadetblue;
    width: 100px;
    height: 100px;
-   animation: create 0.2s linear both;
-
   }
 
-  @keyframes create {
-   0% {
-    width: 0;
-    height: 0;
-    transform: rotate(0);
-   }
-
-   50% {
-    width: 200px;
-    height: 10px;
-   }
-   100% {
-    width: 100px;
-    height: 100px;
-    /* transform: rotate(3600deg); */
-   }
-
-  }
  </style>
 </head>
 
@@ -62,17 +42,13 @@
  <br>
 
  <script>
-  const buttonJS = document.querySelector('.js');
+    const buttonJS = document.querySelector('.js');
+    const divItem = document.createElement('div');
+    // divItem.className = "box";
+    // divItem.classList.add("box");
+    divItem.setAttribute("class", "box");
+    document.body.appendChild(divItem);
 
-  function createDiv() {
-   const divItem = document.createElement('div');
-   // divItem.className = "box";
-   divItem.classList.add("box");
-   // divItem.setAttribute("class", "box");
-   // divItem.innerText = "tekst"
-   document.body.appendChild(divItem);
-  }
-  buttonJS.addEventListener("click", createDiv)
  </script>
 
 
